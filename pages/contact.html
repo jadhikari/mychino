@@ -1,0 +1,118 @@
+{%extends 'main.html'%}
+{% load static%}
+{% block title %}
+            Chino:about
+{% endblock %}
+
+{% block content %}
+<style>
+  
+#contatti a{
+  color: #5161ce;
+  text-decoration: none;
+}
+#contatti{
+    margin-top: 60px;
+}
+#author a{
+  color: #5161ce;
+  text-decoration: none;  
+}
+@media(max-width: 992px) {
+  #contatti{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+}
+</style>
+<div class="row" id="contatti">
+    <div class="container mt-5" >
+    
+        <div class="row" >
+          
+          <div class="col-md-6">
+            <!-- <center>
+              <h3>Thank you {{name}}</h3>
+              <p>We received your email and will respond shortly ...</p>
+            </center> -->
+            <br>
+            <h2 class="text-uppercase mt-3 font-weight-bold text-primary">お問い合わせ</h2>
+            <form action="" method="POST">
+              {% csrf_token %}
+              <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                     <p>
+                      弊社に興味をお持ちいただきありがとうございます。<br>
+                      お問い合わせいただきました内容は、弊社の掲げる個人情報保護方針に沿って管理し、お客様の同意なく第三者に開示・提供することはございません。<br>
+                      詳細につきましては、当サイトの「プライバシーポリシー」をご参照ください。
+                     </p>
+                    </div>
+                  </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control mt-2" placeholder="お名前（必須）" name="name" required>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control mt-2" placeholder="題名（必須）" name="title" required>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input type="email" class="form-control mt-2" placeholder="メールアドレス（必須）" name="email" required>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control mt-2" placeholder="電話番号（必須）" name="phone" required>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-group">
+                    <textarea class="form-control" placeholder="お問い合わせ内容（必須）" rows="3" name ="phone" corequired></textarea>
+                  </div>
+                </div>
+                <div class="col-12">
+                <div class="form-group">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                    <label class="form-check-label" for="invalidCheck2">
+                      確認画面は表示されません。上記内容にて送信しますがよろしいですか？（必須）
+                    </label>
+                  </div>
+                </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit">Submit</button>
+                </div>
+              </div>
+            </form>
+            
+          </div>
+          <div class="offset-md-1 col-md-5 maps" >
+            <div class="text-primary">
+              <h2 class="text-uppercase mt-4 font-weight-bold">私たちがいる場所</h2>
+              <i class="fas fa-phone mt-3"></i> <a href="tel:+81429689974">(+81) 0429 68 9974</a><br>
+              <i class="fas fa-phone mt-3"></i> <a href="tel:+81429689974">(+81) 0429 68 9974</a><br>
+              <i class="fa fa-envelope mt-3"></i> <a href="">info@mychino.jp</a><br>
+              <i class="fas fa-globe mt-3"></i> 〒 359-0044<br>
+              <i class="fas fa-globe mt-3"></i> 埼玉県所沢市松葉町13番17ー203号グランドコード松葉<br>
+              <div class="my-4">
+                <a href=""><i class="fab fa-facebook fa-2x pr-3"></i></a>
+                <a href=""><i class="fab fa-linkedin fa-2x pr-3"></i></a>
+                <a href=""><i class="fab fa-twitter fa-2x"></i></a>
+              </div>
+            </div>
+            <a href="https://www.google.com/maps/place/%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%89%E3%82%B3%E3%83%BC%E3%83%88%E6%9D%BE%E8%91%89/@35.807894,139.4544712,17z/data=!3m1!4b1!4m5!3m4!1s0x6018dd12362cef1b:0x1ed8dfb1c0bd25b5!8m2!3d35.8078977!4d139.4566523?hl=en-US" class="btn btn-primary" style="color: white;">
+              地図にアクセス
+            </a>または、QRコードをスキャンします。<br>
+            <img src="{% static 'images/frame.png' %}" alt="CHINO" class="img-fluid" style="height: 200px;width: 200px;">
+         </div>
+        </div>
+    </div>
+    </div>
+    
+
+{% endblock %}
